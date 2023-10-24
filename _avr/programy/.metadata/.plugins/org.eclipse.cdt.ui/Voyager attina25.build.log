@@ -1,0 +1,18 @@
+
+**** Build of configuration Debug for project Voyager attina25 ****
+
+make all 
+Building file: ../voyager.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=attiny25 -DF_CPU=1000000UL -MMD -MP -MF"voyager.d" -MT"voyager.d" -c -o "voyager.o" "../voyager.c"
+In file included from ../voyager.c:2:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../voyager.c
+ 
+Building target: Voyager attina25.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Voyager attina25.map -mmcu=attiny25 -o "Voyager attina25.elf"  ./voyager.o   
+avr-gcc.exe: attina25.map: No such file or directory
+make: *** [Voyager attina25.elf] Error 1
+
+**** Build Finished ****

@@ -1,0 +1,2 @@
+Button:
+GPO2 jeśli jest podciągnięty do zera moduł przy uruchamianu się wiesza, przycisk należy podciągnąć do vcc i aktywować zerem 

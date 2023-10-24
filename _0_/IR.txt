@@ -1,0 +1,10 @@
+zmiany w bilotece IRremote.h dla pro micro
+// Teensy 2.0
+#elif defined(__AVR_ATmega32U4__)
+	#define IR_USE_TIMER1   // tx = pin 14 (pin 9 pro micro)
+	//#define IR_USE_TIMER3   // tx = pin 9
+	//#define IR_USE_TIMER4_HS  // tx = pin 10
+
+Po wysłaniu należy dodać 
+irrecv.enableIRIn();
+aby móc potem odbierać w jednym programie

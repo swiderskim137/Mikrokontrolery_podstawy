@@ -1,0 +1,11 @@
+Domyślnie w BME jest włączony oversampling, który z czasem powoduje nadmierne nagrzewanie samego układu i zawyża pomiary, to jest powszechnie znana rzecz. Wg datasheet do stacji pogodowej należy używać trybu "forced" z pomiarem co 60 sekund (można częściej, to tylko zalecenie). Konfigurujesz tak:
+status = bme.begin(0x76, &Wire);
+bme.setSampling(Adafruit_BME280::MODE_FORCED,
+Adafruit_BME280::SAMPLING_X1, // temperature
+Adafruit_BME280::SAMPLING_X1, // pressure
+Adafruit_BME280::SAMPLING_X1, // humidity
+Adafruit_BME280::FILTER_OFF);
+I przed odczytem pomiarów robisz:
+bme.takeForcedMeasurement();
+I potem normalnie:
+float temp = bme.readTemperature();

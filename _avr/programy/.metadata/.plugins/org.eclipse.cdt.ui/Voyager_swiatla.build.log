@@ -1,0 +1,43 @@
+
+**** Build of configuration Release for project Voyager_swiatla ****
+
+make all 
+Building file: ../v_swiatla.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=attiny45 -DF_CPU=1000000UL -MMD -MP -MF"v_swiatla.d" -MT"v_swiatla.d" -c -o "v_swiatla.o" "../v_swiatla.c"
+Finished building: ../v_swiatla.c
+ 
+Building target: Voyager_swiatla.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Voyager_swiatla.map -mmcu=attiny45 -o "Voyager_swiatla.elf"  ./v_swiatla.o   
+Finished building target: Voyager_swiatla.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Voyager_swiatla.elf  >"Voyager_swiatla.lss"
+Finished building: Voyager_swiatla.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Voyager_swiatla.elf  "Voyager_swiatla.hex"
+Finished building: Voyager_swiatla.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Voyager_swiatla.elf  "Voyager_swiatla.eep"
+Finished building: Voyager_swiatla.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=attiny45 Voyager_swiatla.elf
+AVR Memory Usage
+----------------
+Device: attiny45
+
+Program:     206 bytes (5.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****

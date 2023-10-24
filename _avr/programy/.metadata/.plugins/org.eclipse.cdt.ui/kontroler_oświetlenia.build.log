@@ -1,0 +1,21 @@
+
+**** Build of configuration Release for project kontroler_oœwietlenia ****
+
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 kontroler_oœwietlenia.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    2404 bytes (29.3% Full)
+(.text + .data + .bootloader)
+
+Data:         11 bytes (1.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****

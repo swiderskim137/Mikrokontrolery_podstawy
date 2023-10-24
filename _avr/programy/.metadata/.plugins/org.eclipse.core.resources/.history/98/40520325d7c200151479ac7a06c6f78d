@@ -1,0 +1,72 @@
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
+
+//definicja LED1 (do którego pinu pod³¹czony LED1)
+#define s_imp (1<<PB0)
+#define zas_osw (1<<PB1)
+#define zas_mostka (1<<PB2)
+
+#define wl_s_imp (1<<PB4)
+#define wl_osw (1<<PB3)
+//#define wl_mostka (1<<PB5)
+/*
+ pin fun
+in
+ 2 -- w³/wy³ silników imp
+ 3 -- w³/wy³ owietlenia
+
+out
+ 5 -- zasilanie silnika imp
+ 6 -- zasilanie oswietlenia
+ 7 -- zasilanie mostka
+
+ */
+
+
+uint8_t klawisz_on(uint8_t klawisz);
+int main(void)
+{
+	int i=0;
+	//########### I/O ###########
+	 DDRB  |= (s_imp | zas_osw | zas_mostka);
+	 PORTB |= (wl_s_imp | wl_osw);
+	 //##########################
+	 while(1){
+		 if(klawisz_on(wl_s_imp))
+		 {
+			 PORTB ^= s_imp;
+			 _delay_ms (1000);
+		 }
+		 if(klawisz_on(wl_osw))
+		 {
+			 i++;
+			 if (i==1)
+			 {
+				 PORTB |= zas_mostka;
+			 }
+			 if (i==2)
+			 {
+				 PORTB |= zas_osw;
+			 }
+
+
+		 			 _delay_ms (1000);
+		 		 }
+		 if(klawisz_on(wl_mostka))
+		 		 {
+		 			 PORTB ^= zas_mostka;
+		 			 _delay_ms (1000);
+		 		 }
+	 }
+
+}
+
+uint8_t klawisz_on(uint8_t klawisz)
+{
+	if  ( !((PINB) & klawisz) ){
+				_delay_ms(100);
+				if (!((PINB) & klawisz)) return 1;
+	}
+	return 0;
+}

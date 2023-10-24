@@ -1,0 +1,43 @@
+
+**** Build of configuration Release for project Voyager ****
+
+make all 
+Building file: ../v_warp.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=attiny45 -DF_CPU=1000000UL -MMD -MP -MF"v_warp.d" -MT"v_warp.d" -c -o "v_warp.o" "../v_warp.c"
+Finished building: ../v_warp.c
+ 
+Building target: Voyager.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Voyager.map -mmcu=attiny45 -o "Voyager.elf"  ./v_warp.o   
+Finished building target: Voyager.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Voyager.elf  >"Voyager.lss"
+Finished building: Voyager.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Voyager.elf  "Voyager.hex"
+Finished building: Voyager.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Voyager.elf  "Voyager.eep"
+Finished building: Voyager.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=attiny45 Voyager.elf
+AVR Memory Usage
+----------------
+Device: attiny45
+
+Program:     220 bytes (5.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****

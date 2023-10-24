@@ -1,0 +1,43 @@
+
+**** Build of configuration Release for project Voyager_a8 ****
+
+make all 
+Building file: ../v_warp.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"v_warp.d" -MT"v_warp.d" -c -o "v_warp.o" "../v_warp.c"
+Finished building: ../v_warp.c
+ 
+Building target: Voyager_a8.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Voyager_a8.map -mmcu=atmega8 -o "Voyager_a8.elf"  ./v_warp.o   
+Finished building target: Voyager_a8.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Voyager_a8.elf  >"Voyager_a8.lss"
+Finished building: Voyager_a8.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Voyager_a8.elf  "Voyager_a8.hex"
+Finished building: Voyager_a8.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Voyager_a8.elf  "Voyager_a8.eep"
+Finished building: Voyager_a8.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Voyager_a8.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:     298 bytes (3.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****

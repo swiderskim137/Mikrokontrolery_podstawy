@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Copy of kontroler_oświetlenia&apos; to &apos;Copy_kontroler_oświetlenia&apos;" description="Rename resource &apos;Copy of kontroler_oświetlenia&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Copy of kontroler_oświetlenia" name="Copy_kontroler_oświetlenia" stamp="1431355429696" updateReferences="true"/>
+</session>

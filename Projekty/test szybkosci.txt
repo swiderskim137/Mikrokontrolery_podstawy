@@ -1,0 +1,109 @@
+mega
+
+1 1000000.00 8919
+2 2000000.00 18641
+3 3000000.00 28844
+4 4000000.00 39095
+5 5000000.00 49751
+6 6000000.00 60505
+7 7000000.00 71258
+8 8000000.00 82012
+9 9000000.00 93073
+10 10000000.00 104330
+
+esp8266 160mhz
+
+Soft WDT reset
+
+>>>stack>>>
+
+ctx: cont
+sp: 3ffffdd0 end: 3fffffc0 offset: 01a0
+3fffff70:  00000008 3ffe8667 3ffee2f4 402010ce  
+3fffff80:  000000a6 feefeffe feefeffe feefeffe  
+3fffff90:  feefeffe feefeffe feefeffe 3ffee35c  
+3fffffa0:  3fffdad0 00000000 3ffee31c 40201aec  
+3fffffb0:  feefeffe feefeffe 3ffe84e0 40100ba9  
+<<<stack<<<
+
+ ets Jan  8 2013,rst cause:2, boot mode:(3,6)
+
+load 0x4010f000, len 3456, room 16 
+tail 0
+chksum 0x84
+csum 0x84
+va5432625
+~ld
+52
+1 1000000.00 421
+2 2000000.00 790
+3 3000000.00 1159
+4 4000000.00 1528
+5 5000000.00 1897
+6 6000000.00 2266
+7 7000000.00 2635
+8 8000000.00 3003
+
+Soft WDT reset
+
+
+esp8266 80MHz
+
+ ets Jan  8 2013,rst cause:2, boot mode:(3,6)
+
+load 0x4010f000, len 3456, room 16 
+tail 0
+chksum 0x84
+csum 0x84
+va5432625
+~ld
+60
+1 1000000.00 797
+2 2000000.00 1535
+3 3000000.00 2273
+4 4000000.00 3010
+
+Soft WDT reset
+
+>>>stack>>>
+
+ctx: cont
+sp: 3ffffdd0 end: 3fffffc0 offset: 01a0
+3fffff70:  00000004 3ffe8667 3ffee2f4 402010ce  
+3fffff80:  00000273 feefeffe feefeffe feefeffe  
+3fffff90:  feefeffe feefeffe feefeffe 3ffee35c  
+3fffffa0:  3fffdad0 00000000 3ffee31c 40201aec  
+3fffffb0:  feefeffe feefeffe 3ffe84e0 40100ba9  
+<<<stack<<<
+
+ ets Jan  8 2013,rst cause:2, boot mode:(3,6)
+
+esp8260-01 80MHz
+Soft WDT reset
+
+>>>stack>>>
+
+ctx: cont
+sp: 3ffffdd0 end: 3fffffc0 offset: 01a0
+3fffff70:  00000004 3ffe8667 3ffee2f4 402010ce  
+3fffff80:  000000bd feefeffe feefeffe feefeffe  
+3fffff90:  feefeffe feefeffe feefeffe 3ffee35c  
+3fffffa0:  3fffdad0 00000000 3ffee31c 40201aec  
+3fffffb0:  feefeffe feefeffe 3ffe84e0 40100ba9  
+<<<stack<<<
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,4)
+
+load 0x4010f000, len 3456, room 16 
+tail 0
+chksum 0x84
+csum 0x84
+va5432625
+~ld
+64
+1 1000000.00 802
+2 2000000.00 1540
+3 3000000.00 2277
+4 4000000.00 3015
+
+Soft WDT reset

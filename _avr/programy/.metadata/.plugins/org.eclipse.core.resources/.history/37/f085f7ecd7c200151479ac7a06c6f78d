@@ -1,0 +1,57 @@
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
+
+//out
+#define s_g (1<<PB0)
+
+int main(void)
+{
+	int mn=8,t2=5,t3=2;
+	t2=t2*mn;
+	t3=t3*mn;
+	//########### I/O ###########
+	 DDRB  |= (s_g);
+	 PORTB |= s_g;
+	 //##########################
+	 while(1){
+		 PORTB ^= s_g;
+		 _delay_ms (1000);
+		 /*
+		 if(klawisz_on(wl_sg))
+		 {
+			 PORTB |= s_g;
+		 }
+		 if(klawisz_on(wl_s_imp))
+		 {
+			 PORTB ^= s_imp;
+		 }
+		 if(klawisz_on(wl_osw))
+		 {
+			 PORTB ^= osw;
+		 }
+		 if (klawisz_on(wl_mostka))
+		 {
+			 PORTB ^= mostek;
+		 }
+		 if(klawisz_on(warp))
+		 {
+			 PORTB |= warp_ladowanie;
+			 for (int i=1; i<=t2;i++)
+			 //³adowanie kondensatora i pojanienie silników
+			 {
+				 _delay_ms (1000);
+			 }
+			 PORTB |= warp_blysk;
+			 for (int i=1; i<=t3;i++)
+			 //b³ysk silników
+			 {
+				 _delay_ms (1000);
+			 }
+			 PORTB &= ~warp_blysk;
+			 PORTB &= ~warp_ladowanie;
+		 }*/
+	 }
+
+}
+

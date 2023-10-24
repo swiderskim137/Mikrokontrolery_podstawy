@@ -1,0 +1,43 @@
+
+**** Build of configuration Release for project warp ****
+
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: warp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,warp.map -mmcu=atmega8 -o "warp.elf"  ./main.o   
+Finished building target: warp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S warp.elf  >"warp.lss"
+Finished building: warp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex warp.elf  "warp.hex"
+Finished building: warp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex warp.elf  "warp.eep"
+Finished building: warp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 warp.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:     152 bytes (1.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****

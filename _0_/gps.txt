@@ -1,0 +1,2 @@
+NEO6MV2 EEPROM 
+    TX/RX logika 3.3v

@@ -1,0 +1,21 @@
+
+**** Build of configuration Debug for project Voyager_attina25 ****
+
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=attiny45 Voyager_attina25.elf
+AVR Memory Usage
+----------------
+Device: attiny45
+
+Program:    3132 bytes (76.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (3.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
